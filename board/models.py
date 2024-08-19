@@ -12,6 +12,7 @@ class Board(models.Model):
     
     def __str__(self):
         return '%s. %s(%d)' % (self.title, self.writer, self.readcount)
+    
     def incrementReadCount(self):
         self.readcount += 1
         self.save()
